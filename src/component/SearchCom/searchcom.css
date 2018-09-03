@@ -1,0 +1,95 @@
+.box {
+    composes: hauto from "../../../public/style/reset.css";
+    composes: iconfont from "../../../public/iconfont/iconfont.css";
+    background: rgba(255, 255, 255, 0);
+    position: fixed;
+    top: 0;
+    z-index: 999;
+}
+
+.w700 {
+    width: 700px;
+    margin: 0 auto;
+    height: auto;
+    overflow: hidden;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.searchIcon {
+    font-size: 40px;
+    color: white;
+    composes: icon-category from "../../../public/iconfont/iconfont.css";
+}
+
+.searchDiv {
+    width: 550px;
+    height: auto;
+    overflow: hidden;
+    background: white;
+    border-radius: 30px;
+    margin: 15px 0;
+}
+
+.loginSpan {
+    color: white;
+}
+
+.spanIcon {
+    display: block;
+    float: left;
+    width: 90px;
+    height: 60px;
+    margin-top: 5px;
+    background: url("../../../public/image/jd_icon.png") no-repeat center;
+    background-size: 40px 40px;
+}
+
+.searchSearch {
+    float: left;
+    font-size: 40px;
+    color: silver;
+    composes: icon-search from "../../../public/iconfont/iconfont.css";
+}
+
+.inputDiv {
+    display: block;
+    float: left;
+    height: 60px;
+    line-height: 60px;
+    width: 360px;
+    padding-left: 15px;
+    margin-top: 8px;
+}
+
+/* .inputDiv{
+    height: 60px;
+    width: 360px;
+    float: left;
+    border: none;
+    margin-top: 5px;
+    margin-left: 10px;
+} */
+
+/* 
+.inputDiv::-webkit-input-placeholder { 
+    color:black;
+    text-align: left;
+    padding: 20px;
+}
+.inputDiv:-moz-placeholder {
+    color:black;
+    text-align: left;
+    padding: 20px;
+}
+.inputDiv::-moz-placeholder { 
+    color:black;
+    text-align: left;
+    padding: 20px;
+}
+.inputDiv:-ms-input-placeholder { 
+    color:black;
+    text-align: left;
+    padding: 20px;
+} */
