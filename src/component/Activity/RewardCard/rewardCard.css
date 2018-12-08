@@ -1,0 +1,30 @@
+.container {
+    composes: hauto from "../../../../public/style/reset.css";
+    background-color: white;
+}
+
+.cardList {
+    width: 96%;
+    height: auto;
+    margin: 0 auto;
+    display: flex;
+    justify-content: space-between;
+}
+
+.cardListLiA{
+    display: block;
+    width: 60%;
+    height: 230px;
+    background-color: red;
+}
+
+.cardListLiA img{
+    height: 230px;
+    width: 100%;
+}
+
+.cardListChild{
+    display: block;
+    width: 30%;
+    height: 230px;
+}

@@ -3,7 +3,8 @@ import styled from "./home.css";
 import SearchCom from "../../component/SearchCom/SearchCom.jsx";
 import SwiperCom from "../../component/swiper/SwiperCom.jsx";
 import ServiceCom from "../../component/ServiceCenter/ServiceCom.jsx";
-import RewardCom from "../../component/Activity/RewardActivity/RewardCom.jsx";
+import MarqueeCom from "../../component/Activity/Marquee/RewardCom.jsx";
+import RewardCardCom from "../../component/Activity/RewardCard/rewardCard.jsx";
 
 export default class Page1 extends Component{
     constructor(props) {
@@ -57,10 +58,11 @@ export default class Page1 extends Component{
     render(){
         return (
             <div className={styled.bg}>
-                <SearchCom />
-                <SwiperCom />
-                <ServiceCom service={this.state.servicesList} />
-                <RewardCom />
+                <SearchCom></SearchCom>
+                <SwiperCom></SwiperCom>
+                <ServiceCom service={this.state.servicesList}></ServiceCom>
+                <MarqueeCom></MarqueeCom>
+                <RewardCardCom></RewardCardCom>
             </div>
         )
     }
