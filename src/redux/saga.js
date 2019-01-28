@@ -1,6 +1,10 @@
 import * as at from "./actionType";
-import { call, put, takeEvery } from 'redux-saga/effects';
+import { call, put, takeEvery, all } from "redux-saga/effects";
 import axios from "axios";
+
+function* helloSaga() {
+  console.log("Hello, Saga !");
+}
 
 function* testAjax(action) {
     console.log(action)
@@ -22,8 +26,8 @@ function* testAjax(action) {
     })
 }
 
-function* rootSaga() {     // 在store.js中，执行了 sagaMiddleware.run(rootSaga)
-    yield takeEvery(at.GET_INFO, testAjax)   // 如果有对应type的action触发，就执行goAge()函数
+function* watchTestAjax() {     // 在store.js中，执行了 sagaMiddleware.run(rootSaga)
+    yield takeEvery(at.GET_INFO, testAjax)
 }
 
 function doData() {
@@ -36,5 +40,9 @@ function doData() {
   fd.append("bizPara", JSON.stringify(param.bizPara));
   return fd;
 }
-
-export default rootSaga;   
+export default function* rootSaga() {
+    yield all([
+        helloSaga(),
+        watchTestAjax()
+    ])
+} 
